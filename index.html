@@ -1,0 +1,441 @@
+<html>
+    <head>
+        <title>Login Website</title>
+        <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #DFCCFB;
+        }    
+        input[type=text],input[type=password]{
+            width: 90%;
+            padding: 11px 2px;
+            margin: 9px 3;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 50px;
+            
+        }
+        button{
+            background-color: blue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+        }
+       
+        button:hover{
+            opacity: 0.8;
+        }
+        .imgcotainer{
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+        .imgcotainer2{
+            text-align: center;
+            margin: 27px 0 14px 0;
+            position: relative;
+        }
+
+        img.avatar{
+            width: 30%;
+            
+            border-radius: 40%;
+
+        }
+        img.avatar2{
+            width: 40%;
+            
+            border-radius: 60%;
+        }
+     .modal{
+        background-color: black;
+        overflow: auto;
+        padding-top: 60px;
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        z-index: 1;
+        position: fixed;
+
+     }   
+     .modal{
+        background-color: white;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+     }
+     .container{
+        padding: 16px;
+     }
+     span.psw {
+        float: right;
+        padding-top: 40px;
+
+     }
+     *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+     }
+     nav{
+        background-color: white;
+        height: 100px;
+        width: 100%;
+     }
+     nav ul{
+        float: right;
+        margin-right: 20px;
+
+     }
+     nav ul li{
+        display: inline-block ;
+        line-height: 80px;
+        margin: 0;
+
+     }
+     nav ul li a{
+        color: black;
+        font-size: 1rem;
+        border-radius: 3px;
+     }
+     a.active,a:hover{
+        color: black;
+        transition: 0.5s;
+     }
+     .checkbtn{
+        font-size: 50px;
+        color: #ccc;
+        float: right;
+        line-height: 60px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+     }
+     
+     @media(max-width:768px){
+        label.logo{
+            font-size: 30px;
+            padding-left: 50px;
+        }
+        nav ul li a{
+            font-size: 1rem;
+        }
+
+     }
+     @media(max-width:852px){
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 78px;
+            left: -100%;
+            background-color: #888;
+            text-align: center;
+            transition: all 0.5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 0;
+            line-height: 40px;
+        }
+        nav ul li a{
+            font-size: 20px;
+        }
+        a:hover,a.active{
+            background-color: none;
+            color: white;
+
+        }
+        #check:checked~ul{
+            left: 0;
+        }
+     }
+     section{
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+     }
+     *{
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+
+     }
+     
+     .label{
+        padding: 5px 10px;
+        
+        color: black;
+        cursor: pointer;
+        font-size: 14px;
+     }
+     .btn-warning{
+        position: relative;
+        padding: 11px 16px;
+        font-size: 15px;
+        line-height: 1.5;
+        border-radius: 3px;
+        border: 0;
+        overflow: hidden;
+
+     }
+     .btn-warning input[type="file"]{
+        cursor: pointer;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        transform: scale(5);
+        opacity: 0;
+     }
+     
+    
+     
+     
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="modal">
+        <form action="login.php" method="post">
+            <div class="imgcotainer">
+            <img src="images/logo-search-grid-1x.png"  class="avatar">
+            </div>
+            <div class="container">
+            <br />
+            <label>
+                Username
+            </label>
+            <input type="text" placeholder="username" class="form-control" name="username">
+            <br />
+            <label>
+                Password
+            </label>
+            <input type="password" placeholder="password" class="form-control" name="password">
+            <br />
+            <input type="checkbox"> Remember me
+            <br />
+            <button>Log In</button>
+            <input type="submit" class="btn-primary w-100" value="login" name=""><br />
+            <label>
+                <p>forget <a href="#"> password</a></p>
+
+            </label>
+
+
+
+            <label>
+
+                <p>no account?<a href="signup.html">signup</a></p>
+            </label>
+            </div>
+            </form>
+            <form>
+            <div class="imgcotainer2">
+                <img src="images/logo-search-grid-1x.png"  class="avatar2">
+                </div>
+            
+                <br />
+                <button type="button">sales</button><br />
+                <button type="button">listing</button>
+                <button type="button">Request</button>
+                <button type="button">Rent</button>
+                
+
+                </form>
+
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check" class=""></label>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#" >Home</a></li>
+                        <li><a href="#">UserProfile</a></li>
+                        <li><a href="#">sales</a></li>
+                        <li><a href="#">Rents</a></li>
+                        <li><a href="#">listing</a></li>
+                        <li><a href="#">Request</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </nav>
+                <section></section>
+
+                <div class="main">
+                        <input type="text" placeholder="Search" name="q">
+                        
+                    
+
+                </div><br><br>
+                
+                <form id="myform">
+                    <label for="info">Info :</label>
+                    <input id="info" type="text" />
+                    <label for="area">Area :</label>
+                    <input id="area" type="text" />
+                    <label for="price range">Price Range :</label>
+                    <input id="price range" type="text" />
+                    <label for="address">Address :</label>
+                    <input id="address" type="text" /><br>
+
+                     <br>
+                     <h3>Property Type</h3><br>
+                    <input type="radio" id="lang-1" name="lang" value="residential" class="radio"checked>
+                    <label class="label lang-1" for="lang-1">Residential</label>
+
+                    <input type="radio" id="lang-2" name="lang" value="commercial" class="radio"checked>
+                    <label class="label lang-2" for="lang-2">Commercial</label>
+                    <br><br>
+                    <h3>Property Owner</h3><br>
+                    <input type="radio" id="lang-3" name="lang" value="Company" class="radio"checked>
+                    <label class="label lang-3" for="lang-3">Company</label>
+
+                    <input type="radio" id="lang-4" name="lang" value="external" class="radio"checked>
+                    <label class="label lang-4" for="lang-4">External</label><br>
+                    <br>
+
+                    <h3>Projects</h3><br>
+                    <input type="radio" id="lang-5" name="lang" value="star towers" class="radio"checked>
+                    <label class="label lang-5" for="lang-5">star towers</label>
+
+                    <input type="radio" id="lang-6" name="lang" value="wavey avenue" class="radio"checked>
+                    <label class="label lang-6" for="lang-6">wavey avenue</label><br>
+                    <br>
+
+                    <input type="radio" id="lang-7" name="lang" value="twin towers" class="radio"checked>
+                    <label class="label lang-7" for="lang-7">Twin towers</label>
+
+                    <input type="radio" id="lang-8" name="lang" value="lalav city" class="radio"checked>
+                    <label class="label lang-8" for="lang-8">Lalav City</label><br>
+
+                    <br>
+                    <input type="radio" id="lang-9" name="lang" value="sky towers" class="radio"checked>
+                    <label class="label lang-9" for="lang-9">sky towers</label>
+
+                    <input type="radio" id="lang-10" name="lang" value="lalav city view" class="radio"checked>
+                    <label class="label lang-10" for="lang-10">Lalav City view</label><br>
+                    <br>
+
+                    <input type="radio" id="lang-11" name="lang" value="MRF% towers" class="radio"checked>
+                    <label class="label lang-11" for="lang-11">MRF% towers</label>
+
+                    <input type="radio" id="lang-12" name="lang" value="Quattro" class="radio"checked>
+                    <label class="label lang-12" for="lang-12">Quattro</label><br>
+                    <br>
+                    <input type="radio" id="lang-13" name="lang" value="other" class="radio"checked>
+                    <label class="label lang-13" for="lang-13">Other</label><br>
+
+
+
+
+
+
+
+                </form>
+                <form>
+                    <br>
+                    <h3>listing Type</h3>
+                    <br>
+                    <input type="radio" id="lang-14" name="lang" value="rent" class="radio"checked>
+                    <label class="label lang-14" for="lang-14">Rent</label>
+                    <input type="radio" id="lang-15" name="lang" value="scale" class="radio"checked>
+                    <label class="label lang-15" for="lang-15">Scale</label><br>
+                    <br>
+                    <input type="radio" id="lang-16" name="lang" value="purchace" class="radio"checked>
+                    <label class="label lang-16" for="lang-16">Purchace</label><br>
+                    <br>
+                    <h3>Property Type</h3>
+                    <br><br>
+                    <input type="radio" id="lang-17" name="lang" value="residential" class="radio"checked>
+                    <label class="label lang-17" for="lang-17">residential</label>
+                    <input type="radio" id="lang-18" name="lang" value="commercial" class="radio"checked>
+                    <label class="label lang-18" for="lang-18">Commercial</label><br>
+                    <br>
+                    <h3>Ownership Type</h3>
+                    <br>
+                    <input type="radio" id="lang-19" name="lang" value="Company" class="radio"checked>
+                    <label class="label lang-19" for="lang-19">Company</label>
+                    <input type="radio" id="lang-20" name="lang" value="external" class="radio"checked>
+                    <label class="label lang-20" for="lang-20">External</label><br>
+                    <br>
+                    <label for="Area">Area :</label>
+                    <input id="area" type="text" />
+                    <br>
+                    <label for="Info">Info :</label>
+                    <input id="info" type="text" />
+                    <label for="value">value :</label>
+                    <input id="value" type="text" />
+                    <label for="address">Address :</label>
+                    <input id="address" type="text" /><br>
+                    <label for="note">Note :</label>
+                    <input id="note" type="text" />
+                    <br>
+                    <div class="upload">
+                        <button type="button" class="btn-warning">
+                            <i class="fa fa-upload"></i>upload image
+                            <input type="file">
+
+                        </button>
+                        <br>
+                        <button>List Now</button>
+                    </div>
+
+                    
+
+                </form>
+                <form>
+                    <h3>Listing Type</h3>
+                    <br>
+                    <input type="radio" id="lang-21" name="lang" value="rent" class="radio"checked>
+                    <label class="label lang-21" for="lang-21">Rent</label>
+                    <input type="radio" id="lang-22" name="lang" value="scale" class="radio"checked>
+                    <label class="label lang-22" for="lang-22">Scale</label><br>
+                    <br>
+                    <input type="radio" id="lang-23" name="lang" value="purchace" class="radio"checked>
+                    <label class="label lang-23" for="lang-23">Purchace</label><br>
+                    <br>
+                    <h3>Property Type</h3>
+                    <br><br>
+                    <input type="radio" id="lang-24" name="lang" value="residential" class="radio"checked>
+                    <label class="label lang-24" for="lang-24">residential</label>
+                    <input type="radio" id="lang-25" name="lang" value="commercial" class="radio"checked>
+                    <label class="label lang-25" for="lang-25">Commercial</label><br>
+                    <br>
+                    <label for="Area">Area :</label>
+                    <input id="area" type="text" />
+                    <br>
+                    <label for="Info">Info :</label>
+                    <input id="info" type="text" />
+                    <label for="value">value :</label>
+                    <input id="value" type="text" />
+                    <label for="address">Address :</label>
+                    <input id="address" type="text" /><br>
+                    <label for="note">Note :</label>
+                    <input id="note" type="text" />
+                    <br>
+                    <button>Request</button>
+
+                </form>
+
+
+
+        </div>
+
+    
+
+        
+
+    </body>
+</html>
